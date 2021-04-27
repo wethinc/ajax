@@ -1,0 +1,76 @@
+<script>
+    window.history.replaceState(null, "contact", "contact");
+    document.title = "We Thinc Solutions | Contact";
+</script>
+<script>
+    /*jelly effect*/
+    $(document).ready(function() {
+        $(".jelly").mouseenter(function() {
+            $(this).toggleClass("animjelly");
+            setTimeout(function() {
+                $(this).toggleClass("animjelly");
+            }, 1050);
+        });
+    });
+    /*animation on scroll for slide in*/
+    $(window).scroll(function() {
+        $(".slideanim").each(function() {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+                $(this).addClass("slide");
+            }
+        });
+    });
+</script>
+<div class="wholebody">
+    <main>
+        <p class="code cod-none">&#60;html&#62;</p>
+
+        <div class="matter-main">
+            <p class="code">&#60;body&#62;</p>
+            <div class="shadow">Contact</div>
+            <div>
+                <p class="code">&#60;h2&#62;</p>
+                <div class="matter-head">
+                    <h1 class="content-h1 cblue"><span class="jelly hwhite">C</span><span class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span class="jelly hwhite">t</span><span class="jelly hwhite">a</span><span class="jelly hwhite">c</span><span class="jelly hwhite">t</span></h1>
+                    <p class="code inline">&#60;/h2&#62;</p>
+                </div>
+                <div class="flex-row phone-col">
+                    <div class="contwidth flex-col">
+                        <p class="content-p1 tecenter cwhite1">We'll get back to you within 24 hours.</p>
+                        <p class="content-p1 cwhite1"><i class="fas fa-phone"></i> +91 6302225133</p>
+                        <p class="content-p1 cwhite1"><i class="fas fa-envelope"></i> wethinc3@gmail.com</p>
+
+                    </div>
+                    <div class="contwidth">
+                        <p class="code">&#60;form&#62;</p>
+                        <form name="contactform" autocomplete="off" action="https://formsubmit.co/wethinc3@gmail.com" onsubmit="return validateform()" method="POST">
+                            <input class="form" type="text" id="fname" name="name" placeholder="Name" required>
+                            <input class="form" type="mail" id="fmail" name="mail" placeholder="E-mail" required>
+                            <input class="form" type="text" id="fsubject" name="subject" placeholder="Subject" required>
+                            <textarea class="form" id="fmessage" name="message" placeholder="Message" style="height:150px"></textarea>
+
+                            <div class="button">
+                                <div class="layer"></div>
+                                <div class="botdot"></div>
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                        <p class="code">&#60;/form&#62;</p>
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+
+        </div>
+        <div class="matter-main">
+            <p class="code">&#60;/body&#62;</p>
+        </div>
+        <p class="code">&#60;/html&#62;</p>
+    </main>
+</div>

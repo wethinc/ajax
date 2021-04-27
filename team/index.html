@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Thinc Solutions | Team</title>
+    <meta name="description" content="Front-end Web Developers, Logo Designers & Templates Designers with a passion for making unique and vivid Projects. Prototyped 3 Commercial websites. looking forward to opportunities with passion & curiosity.">
+    <meta name="keywords" content="we, thinc, solutions, pranay, kumar, varun, nirvan, reddy, front, end , web, developers, logo, templates,designers">
+    <meta name="author" content="We thinc solutions">
+    <meta name="author" content="Ravula Pranay Kumar Reddy">
+    <meta name="author" content="Bokka Varun Reddy">
+    <meta name="author" content="Bokka Nirvan Reddy">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wethinc.github.io/ajax/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wethinc.github.io/ajax/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wethinc.github.io/ajax/favicon-16x16.png">
+    <link rel="stylesheet" href="https://wethinc.github.io/ajax/mixed stylesheet.css">
+    <script src="https://kit.fontawesome.com/b8be333c62.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function myFunction() {
+            $("#topcloseicon").toggleClass("change");
+            $("#myNav").toggleClass("nav-open");
+        }
+
+        function loadpage(page) {
+            $("#topcloseicon").removeClass("change");
+            $("#myNav").removeClass("nav-open");
+            $.ajax({
+                url: page,
+                beforeSend: function() {
+                    $("#loading").addClass("loadin");
+                },
+                success: function(data) {
+                    setTimeout(function() {
+                        $('#screen').html(""); // to empty previous page contents.
+                        $('#screen').html(data);
+                        $("#loading").addClass("loadout");
+                        $("#loading").removeClass("loadin");
+                        setTimeout(function() {
+                            $("#loading").removeClass("loadout");
+                        }, 650);
+                    }, 2000);
+                }
+            });
+        }
+        /*jelly effect*/
+        $(document).ready(function() {
+            $(".jelly").mouseenter(function() {
+                $(this).toggleClass("animjelly");
+                setTimeout(function() {
+                    $(this).toggleClass("animjelly");
+                }, 1050);
+            });
+        });
+        /*animation on scroll for slide in*/
+        $(window).scroll(function() {
+            $(".slideanim").each(function() {
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    </script>
+    <script>
+        function validateform() {
+            var name = document.contactform.name.value;
+            var subject = document.contactform.subject.value;
+            var mail = document.contactform.mail.value;
+            var atposition = mail.indexOf("@");
+            var dotposition = mail.lastIndexOf(".");
+
+            if (name == null || name == " ") {
+                alert("Name can't be blank");
+                return false;
+            } else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Please enter a valid e-mail address");
+                return false;
+            } else if (subject == null || subject == "") {
+                alert("Subject can't be blank");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="topcloseicon" class="icobut" onclick="myFunction()">
+        <div class="x-bar1"></div>
+        <div class="x-bar2"></div>
+        <div class="x-bar3"></div>
+    </div>
+
+    <nav id="myNav" class="navbar">
+        <div class="sect flex-sta">
+            <div class="nav-logo flex-col ">
+                <img src="https://wethinc.github.io/ajax/images/final logo.PNG" alt="Logo of We Thinc Solutions">
+                <div>
+                    <p class="font-p1">Solutions</p>
+                </div>
+            </div>
+            <div class="nav-link flex-col ">
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajhome.html')"><span id="lhome">Home</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajwork.html')"><span id="lwork">Work</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajblog.html')"><span id="lblog">Blog</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajteam.html')"><span id="lteam">Team</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajcontact.html')"><span id="lcontact">Contact</span></div>
+            </div>
+        </div>
+        <div class="sect">
+            <div class="nav-social flex-col ">
+                <div class="flex-row ">
+                    <a href="https://www.instagram.com/wethinc3"><span class="social-sym hwhite " ><i class="fab fa-instagram "></i></span></a>
+                    <a href="http://www.linkedin.com/in/wethinc"><span class="social-sym hwhite " ><i class="fab fa-linkedin-in "></i></span></a>
+                    <a href="https://twitter.com/ThincWe "><span class="social-sym hwhite "><i class="fab fa-twitter "></i></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loading">
+        <div class="wrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    <div id="screen">
+
+        <main>
+
+            <p class="code">&#60;html&#62;</p>
+            <div class="matter-main">
+                <p class="code">&#60;body&#62;</p>
+                <p class="code">&#60;h1&#62;</p>
+                <div class="matter-head">
+
+                    <img src="https://wethinc.github.io/ajax/images/we.PNG" alt="Logo of We thinc Solutions | front end development" class="h1we-text jelly hwhite" alt="We">
+                    <h1 class="content-h1 cwhite1">&#160;<span class="jelly hblue">a</span><span class="jelly hblue">r</span><span class="jelly hblue">e</span></h1>
+
+                </div>
+                <p class="code">&#60;/h1&#62;</p>
+            </div>
+        </main>
+
+        <br>
+        <br>
+        <div class="team-section flex-col">
+            <div class="team-row">
+                <div class="team-col">
+                    <div class="team-box"> <img src="https://wethinc.github.io/ajax/images/varun.jpg" alt="Image of Varun Reddy Bokka"></div>
+                    <div class="flex-col team-box team-text cwhite1">
+                        <div>
+                            <h1 class="content-p1">Varun Reddy</h1>
+                            <br>
+                            <h1 class="content-p2 cpink">Thor</h1>
+                            <br>
+                            <h1 class="content-p3">He codes for websites with utmost interest. He is a free-spirited coder. His focus on solving challenges is simply great. The aspect that impresses me a lot about him is his capacity of grasping things faster.
+                            </h1>
+                        </div>
+
+                        <div class="team-social">
+                            <div class="flex-row ">
+                                <a href="https://www.instagram.com/varun_bokka"><span class=" social-sym hwhite "><i class="fab fa-instagram "></i></span></a>
+                                <a href="https://www.linkedin.com/in/varunbokka"><span class="social-sym hwhite"><i class="fab fa-linkedin-in "></i></span></a>
+                                <a href="https://twitter.com/varun_bokka"><span class=" social-sym hwhite "><i class="fab fa-twitter "></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-col">
+                    <div class="flex-col team-box  team-text order2 cwhite1">
+                        <div>
+                            <h1 class="content-p1">Pranay Kumar Reddy</h1>
+                            <br>
+                            <h1 class="content-p2 cpink">Iron Man</h1>
+                            <br>
+                            <h1 class="content-p3">He does everything from designing to hosting by considering the wide range of thoughts. He enjoys designing and coding a website. He works with great confidence and discipline. His ideas and logics are the things we admire
+                                a lot.</h1>
+                        </div>
+
+                        <div class="team-social">
+                            <div class="flex-row ">
+                                <a href="http://www.linkedin.com/in/rpranaykumarreddy"><span class="social-sym hwhite"><i class="fab fa-linkedin-in "></i></span></a>
+                                <a href="https://twitter.com/rpkr_inc"><span class=" social-sym hwhite "><i class="fab fa-twitter "></i></span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="team-box order1"><img src="https://wethinc.github.io/ajax/images/pranay.jpg" alt="Image of Pranay Kumar Reddy Ravula"></div>
+                </div>
+
+                <div class="team-col">
+                    <div class="team-box"><img src="https://wethinc.github.io/ajax/images/nirvan.jpg" alt="Image of Nirvan Reddy Bokka"></div>
+                    <div class="flex-col team-box  team-text cwhite1">
+                        <div>
+                            <h1 class="content-p1">Nirvan Reddy</h1>
+                            <br>
+                            <h1 class="content-p2 cpink">Captain America</h1>
+                            <br>
+                            <h1 class="content-p3">He primarily codes as well as tests the website. His advice is always worthy of changing. He faces any challenge with an easy mindset. He makes the work a humorous experience. He is shrewd and self-motivated.
+                            </h1>
+                        </div>
+
+                        <div class="team-social">
+                            <div class="flex-row ">
+                                <a href="https://www.instagram.com/its_me_versatile.nirvan"><span class=" social-sym hwhite "><i class="fab fa-instagram "></i></span></a>
+                                <a href="https://www.linkedin.com/in/bnirvanreddy"><span class="social-sym hwhite"><i class="fab fa-linkedin-in "></i></span></a>
+                                <a href="https://twitter.com/nirvan_reddy"><span class=" social-sym hwhite "><i class="fab fa-twitter "></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="code">*Descriptions are given by colleagues</p>
+        </div>
+
+        <br><br>
+        <main>
+            <div class="matter-main">
+                <p class="code">&#60;/body&#62;</p>
+            </div>
+            <p class="code">&#60;/html&#62;</p>
+        </main>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<script>
+    window.history.replaceState(null, "work", "work");
+    document.title = "We Thinc Solutions | Work";
+</script>
+<script>
+    /*jelly effect*/
+    $(document).ready(function() {
+        $(".jelly").mouseenter(function() {
+            $(this).toggleClass("animjelly");
+            setTimeout(function() {
+                $(this).toggleClass("animjelly");
+            }, 1050);
+        });
+    });
+    /*animation on scroll for slide in*/
+    $(window).scroll(function() {
+        $(".slideanim").each(function() {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+                $(this).addClass("slide");
+            }
+        });
+    });
+</script>
+<div class="wholebody">
+    <div>
+        <div>
+            <h1 class="shadow">Work</h1>
+        </div>
+        <main>
+            <p class="code">&#60;html&#62;</p>
+            <div class="matter-main">
+                <p class="code">&#60;body&#62;</p>
+                <p class="code">&#60;h1&#62;</p>
+
+                <div class="matter-head">
+
+                    <div>
+                        <img src="https://wethinc.github.io/ajax/images/we.PNG" alt="Logo of We thinc Solutions | front end development" class="h1we-text jelly hwhite" alt="We">
+                        <h1 class="content-h1 cblue">&#160;<span class="jelly hwhite">H</span><span class="jelly hwhite">a</span><span class="jelly hwhite">v</span><span class="jelly hwhite">e</span></h1>
+                        <h1 class="content-h1 cblue">&#160;<span class="jelly hwhite">D</span><span class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span class="jelly hwhite">e</span></h1>
+                    </div>
+                </div>
+                <p class="code">&#60;/h1&#62;</p>
+
+            </div>
+
+    </div>
+    </main>
+    <br>
+    <div>
+        <div>
+
+
+            <div class="works">
+                <div id="web-WTS" class="frame block">
+                    <img src="https://wethinc.github.io/ajax/images/3.PNG" alt="image of dummy portfolio">
+                    <div class="details flex-col">
+                        <div>
+                            <a href="#">
+                                <h1 class="cwhite">We thinc Solutions</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="web-PORT" class="frame block">
+                    <img src="https://wethinc.github.io/ajax/images/2.JPG" alt="Logo of We thinc Solutions">
+                    <div class="details flex-col">
+                        <div>
+                            <a href="https://wethinc.github.io/ajax/portfolio/index.html">
+                                <h1 class="cwhite">Our Portfolio</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="web-HAA" class="frame block">
+                    <img src="https://wethinc.github.io/ajax/images/1.png" alt="Logo of Hyderabad arts Academy">
+                    <div class="details flex-col">
+                        <div>
+                            <a href="https://hydartsacademy.com">
+                                <h1 class="cwhite">Hyderabad Arts Academy</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <div class="matter-main">
+            <p class="code">&#60;/body&#62;</p>
+        </div>
+        <p class="code">&#60;/html&#62;</p>
+    </main>
+</div>

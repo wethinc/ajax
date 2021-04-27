@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Thinc Solutions | Blog</title>
+    <meta name="description" content="Front-end Web Developers, Logo Designers & Templates Designers with a passion for making unique and vivid Projects. Prototyped 3 Commercial websites. looking forward to opportunities with passion & curiosity.">
+    <meta name="keywords" content="we, thinc, solutions, pranay, kumar, varun, nirvan, reddy, front, end , web, developers, logo, templates,designers">
+    <meta name="author" content="We thinc solutions">
+    <meta name="author" content="Ravula Pranay Kumar Reddy">
+    <meta name="author" content="Bokka Varun Reddy">
+    <meta name="author" content="Bokka Nirvan Reddy">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wethinc.github.io/ajax/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wethinc.github.io/ajax/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wethinc.github.io/ajax/favicon-16x16.png">
+    <link rel="stylesheet" href="https://wethinc.github.io/ajax/mixed stylesheet.css">
+    <script src="https://kit.fontawesome.com/b8be333c62.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function myFunction() {
+            $("#topcloseicon").toggleClass("change");
+            $("#myNav").toggleClass("nav-open");
+        }
+
+        function loadpage(page) {
+            $("#topcloseicon").removeClass("change");
+            $("#myNav").removeClass("nav-open");
+            $.ajax({
+                url: page,
+                beforeSend: function() {
+                    $("#loading").addClass("loadin");
+                },
+                success: function(data) {
+                    setTimeout(function() {
+                        $('#screen').html(""); // to empty previous page contents.
+                        $('#screen').html(data);
+                        $("#loading").addClass("loadout");
+                        $("#loading").removeClass("loadin");
+                        setTimeout(function() {
+                            $("#loading").removeClass("loadout");
+                        }, 650);
+                    }, 2000);
+                }
+            });
+        }
+        /*jelly effect*/
+        $(document).ready(function() {
+            $(".jelly").mouseenter(function() {
+                $(this).toggleClass("animjelly");
+                setTimeout(function() {
+                    $(this).toggleClass("animjelly");
+                }, 1050);
+            });
+        });
+        /*animation on scroll for slide in*/
+        $(window).scroll(function() {
+            $(".slideanim").each(function() {
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    </script>
+    <script>
+        function validateform() {
+            var name = document.contactform.name.value;
+            var subject = document.contactform.subject.value;
+            var mail = document.contactform.mail.value;
+            var atposition = mail.indexOf("@");
+            var dotposition = mail.lastIndexOf(".");
+
+            if (name == null || name == " ") {
+                alert("Name can't be blank");
+                return false;
+            } else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Please enter a valid e-mail address");
+                return false;
+            } else if (subject == null || subject == "") {
+                alert("Subject can't be blank");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="topcloseicon" class="icobut" onclick="myFunction()">
+        <div class="x-bar1"></div>
+        <div class="x-bar2"></div>
+        <div class="x-bar3"></div>
+    </div>
+
+    <nav id="myNav" class="navbar">
+        <div class="sect flex-sta">
+            <div class="nav-logo flex-col ">
+                <img src="https://wethinc.github.io/ajax/images/final logo.PNG" alt="Logo of We Thinc Solutions">
+                <div>
+                    <p class="font-p1">Solutions</p>
+                </div>
+            </div>
+            <div class="nav-link flex-col ">
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajhome.html')"><span id="lhome">Home</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajwork.html')"><span id="lwork">Work</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajblog.html')"><span id="lblog">Blog</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajteam.html')"><span id="lteam">Team</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.github.io/ajax/ajcontact.html')"><span id="lcontact">Contact</span></div>
+            </div>
+        </div>
+        <div class="sect">
+            <div class="nav-social flex-col ">
+                <div class="flex-row ">
+                    <a href="https://www.instagram.com/wethinc3"><span class="social-sym hwhite " ><i class="fab fa-instagram "></i></span></a>
+                    <a href="http://www.linkedin.com/in/wethinc"><span class="social-sym hwhite " ><i class="fab fa-linkedin-in "></i></span></a>
+                    <a href="https://twitter.com/ThincWe "><span class="social-sym hwhite "><i class="fab fa-twitter "></i></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loading">
+        <div class="wrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    <div id="screen">
+        <main>
+            <p class="code">&#60;html&#62;</p>
+            <div class="matter-main">
+                <p class="code">&#60;body&#62;</p>
+                <div class="shadow">Blog</div>
+                <div>
+                    <p class="code">&#60;h2&#62;</p>
+                    <div class="matter-head">
+                        <h1 class="content-h1 cblue jelly hwhite"><img class="h1we-text" src="https://wethinc.github.io/ajax/images/we.PNG" alt="Logo of We thinc Solutions | front end development">&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">B</span><span class="jelly hwhite">l</span><span class="jelly hwhite">o</span><span class="jelly hwhite">g</span></h1>
+                        <p class="code inline">&#60;/h2&#62;</p>
+                    </div>
+                    <div class="blog-group">
+                        <div class="blog-card">
+                            <p class="code">&#60;article&#62;</p>
+                            <h1 class="content-p1 cpink hblue">Journey of We Thinc Solutions</h1>
+                            <p class="blog-date">April 28, 2021</p>
+                            <p class="content-p3 cwhite2">It would be genuine to say that we have started learning all that stuff related to web development for the cause of being financially independent. Later we realized that we were evolving ourselves in it with a great sense of
+                                passion...
+                            </p>
+                            <div class="fix-bottom">
+                                <p class="content-p2 cblue"><a href="#">Read more...</a></p>
+                                <p class="code">&#60;/article&#62;</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
+
+            </div>
+            <div class="matter-main">
+                <p class="code">&#60;/body&#62;</p>
+            </div>
+            <p class="code">&#60;/html&#62;</p>
+        </main>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
