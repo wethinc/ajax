@@ -189,6 +189,10 @@ a:active {
     flex-grow: 0;
 }
 
+.poicur {
+    cursor: pointer;
+}
+
 .loadin {
     padding-left: 10%;
     transition: padding 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -1205,7 +1209,12 @@ footer {
     left: -25%;
 }
 
+a {
+    cursor: pointer;
+}
+
 .button a {
+    cursor: pointer;
     font-size: 18px;
     position: absolute;
     top: 50%;
