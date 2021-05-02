@@ -942,6 +942,68 @@ footer {
 }
 
 
+/*varun skill bar*/
+
+.bar .progress-line.var-html span {
+    width: 90%;
+}
+
+.progress-line.var-html span::after {
+    content: "90%";
+}
+
+.bar .progress-line.var-css span {
+    width: 70%;
+}
+
+.progress-line.var-css span::after {
+    content: "70%";
+}
+
+.bar .progress-line.var-js span {
+    width: 65%;
+}
+
+.progress-line.var-js span::after {
+    content: "65%";
+}
+
+
+/*nirvan skill bar*/
+
+.bar .progress-line.nir-html span {
+    width: 90%;
+}
+
+.progress-line.nir-html span::after {
+    content: "90%";
+}
+
+.bar .progress-line.nir-css span {
+    width: 65%;
+}
+
+.progress-line.nir-css span::after {
+    content: "65%";
+}
+
+.bar .progress-line.nir-js span {
+    width: 65%;
+}
+
+.progress-line.nir-js span::after {
+    content: "65%";
+}
+
+.bar .progress-line.nir-sony span {
+    width: 55%;
+}
+
+.progress-line.nir-sony span::after {
+    content: "55%";
+}
+
+
 /*name animation*/
 
 .name-box {
@@ -972,7 +1034,7 @@ footer {
 }
 
 .name-box .title h1 {
-    font-size: 25px;
+    font-size: 22px;
     opacity: 0;
     animation: mainFadeIn 2s forwards;
     animation-delay: 2s;
