@@ -468,7 +468,7 @@ a:active {
 }
 
 #web-HAA {
-    background-color: rgb(243, 209, 86);
+    background-color: rgb(243, 209, 65);
 }
 
 .works {
@@ -522,6 +522,7 @@ a:active {
 
 .frame:hover .details {
     transform: translate(-50%, -50%) rotateY(0deg);
+     cursor: pointer;
 }
 
 
