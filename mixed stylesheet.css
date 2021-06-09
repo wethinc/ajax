@@ -456,21 +456,6 @@ a:active {
     color: #23d8f7;
 }
 
-
-/*work section styles*/
-
-#web-PORT {
-    background-color: rgb(29, 29, 29);
-}
-
-#web-WTS {
-    background-color: rgb(29, 29, 29);
-}
-
-#web-HAA {
-    background-color: rgb(243, 209, 65);
-}
-
 .works {
     width: 100%;
     height: auto;
