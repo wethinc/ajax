@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <h1>The div element</h1>
+
+
+    <form method="get" style="display: none;">
+        <input type="number" id="A" step="1" max="1" min="0" name="A">
+        <input type="number" id="B" step="1" max="1" min="0" name="B">
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        //countdown
+        var Mar = new Date('2022-05-21 21:30:00');
+        var Din = new Date('2022-05-22 20:30:00');
+        var now = new Date();
+        var Bmar = new Date(Mar.getTime() - (12 * 60 * 60 * 1000));
+        var Amar = new Date(Mar.getTime() + (12 * 60 * 60 * 1000));
+        var Bdin = new Date(Din.getTime() - (12 * 60 * 60 * 1000));
+        var Adin = new Date(Din.getTime() + (12 * 60 * 60 * 1000));
+        console.log(Mar.getTime());
+        console.log(Bmar.getTime());
+
+        if (now.getTime() <= Bmar.getTime()) {
+            document.write("Invitation");
+        } else if (now.getTime() <= Bdin.getTime()) {
+            document.write("Marriage Video on");
+        } else if (now.getTime() <= Adin.getTime()) {
+            document.write("Dinner Video on");
+        } else if (now.getTime() > Adin.getTime()) {
+            document.write("Memory on");
+        }
+
+        /// form 
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        A = url.searchParams.get("A");
+        B = url.searchParams.get("B");
+        document.getElementById("A").value = A;
+        document.getElementById("B").value = B;
+        if (A == 1) {
+            document.write('<br>Set it for Male');
+            // code for male
+        } else {
+            document.write('<br>Set it for Female');
+            // code for female
+        }
+        if (B == 1) {
+            document.write('<br>Set it for Event-1');
+            // code for Event-1
+        } else {
+            document.write('<br>unset it for Event-1');
+            // code for delete Event-1
+        }
+    </script>
+</body>
+
+</html>
