@@ -90,8 +90,8 @@
     <div class="page-countdown">
         <div class="bg-fil-bla">
             <p class="fam-nam">
-                <span class="disSMal disBMar">Bride Family's wedding Invitation</span>
-                <span class="disSFem disBMar">Groom Family's wedding Invitation</span>
+                <span class="disSMBM">Bride Family's wedding Invitation</span>
+                <span class="disSFBM">Groom Family's wedding Invitation</span>
                 <span class="disAMar">We are a Family now!</span></p>
             <div class="con-pat">
                 <div class="left cwhite tecen">
@@ -605,15 +605,26 @@
                 claDisNon(Cdvi);
                 claDisOpp(Cmem);
             }
-            var Cbmar, Camar;
-            Cbmar = document.getElementsByClassName("disBMar")
-            Camar = document.getElementsByClassName("disAMar")
+            var Cbmar, Camar, SMBM, SFBM;
+            Cbmar = document.getElementsByClassName("disBMar");
+            Camar = document.getElementsByClassName("disAMar");
+            SMBM = document.getElementsByClassName("disSMBM");
+            SFBM = document.getElementsByClassName("disSFBM");
             if (Mar.getTime() >= now.getTime()) {
                 claDisNon(Camar);
                 claDisOpp(Cbmar);
+                if (A == 1) {
+                    claDisNon(SFBM);
+                    claDisOpp(SMBM);
+                } else {
+                    claDisNon(SMBM);
+                    claDisOpp(SFBM);
+                }
             } else {
                 claDisNon(Cbmar);
                 claDisOpp(Camar);
+                claDisNon(SMBM);
+                claDisNon(SFBM);
             }
         }
 
