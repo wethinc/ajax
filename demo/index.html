@@ -8,890 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lavishly Yours' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/5bd445c778.js" crossorigin="anonymous"></script>
-    <title>Wedding Invitation</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Tangerine';
-            background: url(bg.png) repeat;
-        }
-        
-         :root {
-            --red: #f0394d;
-            --lred: #fa4753;
-            --white: #ffffff;
-            --black: #17181c;
-            --blue: #98A5C9;
-        }
-        
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .flex-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .flex-row {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .disnon {
-            display: none !important;
-        }
-        
-        .cwhite {
-            color: var(--white) !important;
-        }
-        
-        .cred {
-            color: var(--red) !important;
-        }
-        
-        .cblack {
-            color: var(--black) !important;
-        }
-        
-        .fotan {
-            font-family: 'Tangerine';
-        }
-        
-        .folav {
-            font-family: 'Lavishly Yours';
-        }
-        
-        .tecen {
-            text-align: center;
-        }
-        
-        .teupp {
-            text-transform: uppercase;
-        }
-        
-        .telow {
-            text-transform: lowercase;
-        }
-        
-        .text2 {
-            font-weight: bold;
-            font-size: 2vmin;
-        }
-        
-        .text3 {
-            font-weight: bold;
-            font-size: 3vmin;
-        }
-        
-        .text4 {
-            font-weight: bold;
-            font-size: 4vmin;
-        }
-        
-        .text5 {
-            font-weight: bold;
-            font-size: 5vmin;
-        }
-        
-        .text6 {
-            font-weight: bold;
-            font-size: 6vmin;
-        }
-        
-        .text7 {
-            font-weight: bold;
-            font-size: 7vmin;
-        }
-        /*Home Page*/
-        
-        .page-1 {
-            height: 100vh;
-            background: url(full-pic.jpg) no-repeat center;
-            background-size: cover;
-        }
-        
-        .page-1 .bg-fil-bla {
-            background: rgba(0, 0, 0, 0.5);
-            height: 100vh;
-        }
-        
-        .div-hom {
-            height: 100vh;
-            width: 70vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .hom-tit {
-            position: relative;
-            height: 45vh;
-            width: 50vw;
-            color: var(--white);
-        }
-        
-        .div-tit-bro {
-            position: absolute;
-            z-index: 50;
-            top: 55%;
-            left: 50%;
-            transform: translate(-100%, -100%);
-        }
-        
-        .div-tit-symbol {
-            position: absolute;
-            z-index: 0;
-            opacity: 0.75;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotateZ(15deg);
-        }
-        
-        .div-tit-gro {
-            height: fit-content;
-            position: absolute;
-            z-index: 50;
-            top: 45%;
-            left: 50%;
-            transform: translate(0%, 0%);
-        }
-        
-        @keyframes heart {
-            0% {
-                transform: scale(0.9);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(0.9);
-            }
-        }
-        
-        .div-tit-symbol img {
-            animation: heart 1s ease-in-out infinite;
-            height: 40vmin;
-        }
-        
-        .div-tit-bro .bro-tit {
-            font-family: 'Lavishly Yours';
-            font-size: 15vh;
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        .div-tit-gro .gro-tit {
-            font-family: 'Lavishly Yours';
-            font-size: 15vh;
-            margin: 0px;
-            padding: 0px;
-        }
-        /*Home Date*/
-        
-        .hom-div-title {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        
-        .hom-title-bottom-icon {
-            height: 30px;
-            transform: translateY(calc(-50% - 4px));
-        }
-        
-        .hom-title-bottom-icon img {
-            height: inherit;
-            width: inherit;
-        }
-        
-        .hom-title-text-div {
-            border-top: 2px solid var(--red);
-            border-bottom: 2px solid var(--red);
-        }
-        
-        .hom-font-title {
-            margin: 1px 0px;
-            border-top: 2px solid var(--red);
-            border-bottom: 2px solid var(--red);
-            font-weight: bold;
-            color: var(--white);
-            font-size: 7vmin;
-            padding: 4px 35px 15px 35px;
-        }
-        
-        .hom-get-text {
-            margin: 0px 0px 3vmin 0px;
-            font-weight: bold;
-            color: var(--white);
-            font-size: 5vmin;
-        }
-        /*Button*/
-        
-        .button {
-            cursor: pointer;
-            position: relative;
-            height: 80px;
-            width: 300px;
-            border-radius: 40px;
-            overflow: hidden;
-            border: 3px solid var(--red);
-            transition: all 1s ease;
-        }
-        
-        .button .tex {
-            cursor: pointer;
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            top: 0px;
-            right: 0px;
-            font-size: 40px;
-            font-weight: bold;
-            color: var(--white);
-        }
-        
-        .layer {
-            cursor: pointer;
-            position: absolute;
-            bottom: 0px;
-            left: 150px;
-            width: 40px;
-            height: 40px;
-            transform: translate(-50%, 35%);
-            background-image: url("love-fill.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            transition: all 1s ease;
-        }
-        
-        .button:hover .layer {
-            transform: translate(-50%, 50%);
-            width: 400px;
-            height: 400px;
-        }
-        /*Countadown*/
-        
-        .page-countdown {
-            background-image: url("hands.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .page-countdown .bg-fil-bla {
-            background: rgba(0, 0, 0, 0.6);
-            height: 100%;
-            width: 100%;
-            padding: 6vh 5vw;
-        }
-        
-        .fam-nam {
-            text-align: center;
-            margin: 15px 0px;
-            font-weight: bold;
-            color: var(--white);
-            font-size: 7vmin;
-        }
-        
-        .con-pat {
-            padding: 5vmin 0px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-            flex-wrap: wrap;
-        }
-        
-        .con-pat .left {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            width: 40vw;
-        }
-        
-        .BG-nam {
-            font-weight: bold;
-            font-size: 9vmin;
-        }
-        
-        .BG-nam img {
-            transform: translateY(30%);
-            height: 10vmin;
-            width: 10vmin;
-        }
-        
-        .con-pat .right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            width: 40vw;
-        }
-        /*Google & whatsapp button*/
-        
-        .but-map {
-            font-family: sans-serif;
-            cursor: pointer;
-            height: 60px;
-            width: 258px;
-            border-radius: 30px;
-            overflow: hidden;
-            transition: all 0.5s ease;
-            background: linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
-            padding: 4px;
-        }
-        
-        .but-what {
-            background: #25D366 !important;
-        }
-        
-        .but-map-lay {
-            cursor: pointer;
-            height: 52px;
-            width: 250px;
-            border-radius: 26px;
-            overflow: hidden;
-            transition: all 0.5s ease;
-            background: var(--white);
-        }
-        
-        .but-map-lay .tex {
-            transition: all 0.5s ease;
-            cursor: pointer;
-            font-size: 25px;
-            font-weight: bold;
-            color: var(--black);
-        }
-        
-        .but-map-lay img {
-            height: 40px;
-            width: 40px;
-        }
-        
-        .but-map:hover .but-map-lay {
-            background: none;
-        }
-        
-        .but-map:hover .tex {
-            color: var(--white);
-        }
-        /*Timer*/
-        
-        #div-con-tim {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: stretch;
-            flex-wrap: wrap;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .div-com {
-            margin: 20px;
-            padding: 10px 25px;
-            border: solid 4px var(--red);
-            border-radius: 20px;
-            background: url(bg.png) repeat;
-            color: var(--black);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .div-com .tim-val {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .div-com .tim-val-nam {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .tim-val {
-            font-weight: bold;
-            font-size: 6.8vmin;
-        }
-        
-        .tim-val-nam {
-            font-weight: bold;
-            font-size: 4vmin;
-        }
-        /*Youtube*/
-        
-        .page-youtube {
-            height: 100vh;
-            padding: 6vh 5vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        /*About*/
-        
-        .page-about {
-            padding: 6vh 5vw;
-        }
-        
-        .div-photo {
-            margin-top: 3vmin;
-            position: relative;
-        }
-        
-        .photo-main {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .photo-sub {
-            border-radius: 50%;
-            margin: 2vmin;
-            width: 25vmin;
-            height: 25vmin;
-            overflow: hidden;
-        }
-        
-        .photo-sub img {
-            width: 25vmin;
-            height: 25vmin;
-        }
-        
-        .hov-pho {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .hov-pho .photo-sub {
-            background-color: #ffffff;
-            border-radius: 50%;
-            width: 15vmin;
-            height: 15vmin;
-            padding: 2.5vmin;
-            overflow: hidden;
-        }
-        
-        .hov-pho .photo-sub img {
-            transform: translate(0%, 6%);
-            width: 10vmin;
-            height: 10vmin;
-        }
-        
-        .about-main {
-            margin-top: 2vmin;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        
-        .about-sub {
-            width: 35%;
-            color: var(--black);
-            padding: 12px;
-            font-size: 20px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-        }
-        /*Event*/
-        
-        .page-event {
-            padding: 6vh 5vw;
-        }
-        
-        .event-main {
-            margin-top: 3vmin;
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .event-sub {
-            width: 35%;
-            height: 250px;
-            color: #f3f3f3;
-            background-color: #313131;
-            padding: 12px;
-            border: 0px solid #ccc;
-            font-size: 20px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-        
-        .event-det {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .event-cont {
-            display: inline-block;
-            font-size: 30px;
-            font-weight: 200;
-            margin: 10px;
-            text-align: center;
-        }
-        /*Family*/
-        
-        .page-family {
-            padding: 6vh 5vw;
-        }
-        
-        .car-man {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .div-fam {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        
-        .car-man-BG {
-            width: 30vmin !important;
-            height: 30vmin !important;
-            max-width: 150px !important;
-            max-height: 150px !important;
-            margin: 3vmin !important;
-        }
-        
-        .cir-div-card {
-            position: relative;
-            width: 50vmin;
-            height: 50vmin;
-            max-width: 250px;
-            max-height: 250px;
-        }
-        
-        .cir-div-card:hover .cir-card-bottom {
-            background-color: var(--red);
-        }
-        
-        .cir-div-card:hover .cir-card-top {
-            transform: scale(1.02);
-        }
-        
-        .car-man .active .cir-card-bottom {
-            background-color: var(--red);
-        }
-        
-        .car-man .active .cir-card-top {
-            transform: scale(1.02);
-        }
-        
-        .cir-card-top {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            border-radius: 50%;
-            transition: all 0.3s linear;
-            overflow: hidden;
-        }
-        
-        .cir-card-top img {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .cir-card-bottom {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform: scale(1.03);
-            z-index: -1;
-            top: 2%;
-            left: -2%;
-            background-color: none;
-            border-radius: 50%;
-            transition: all 0.3s linear;
-        }
-        
-        .sid-fam {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        
-        .grp-rel {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .fam-text {
-            margin: 2vmin 0px 6vmin 0px;
-        }
-        
-        .fam-text p {
-            margin: 8px 0px;
-        }
-        /*Gallery*/
-        
-        .page-gallery {
-            padding: 6vh 5vw;
-        }
-        
-        .box-card {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        
-        .div-card {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 20px;
-        }
-        
-        .div-card:hover .card-bottom {
-            transform: rotate(10deg) scale(0.97);
-        }
-        
-        .div-card:hover .card-top {
-            transform: scale(1.03);
-        }
-        
-        .card-top {
-            position: absolute;
-            transform: rotate(2deg);
-            width: 100%;
-            height: 100%;
-            background-color: var(--red);
-            border-radius: 10px;
-            z-index: 1;
-            transition: all 0.3s linear;
-            overflow: hidden;
-        }
-        
-        .card-top img {
-            width: inherit;
-            height: inherit;
-        }
-        
-        .card-bottom {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            transform: rotate(4deg);
-            z-index: -1;
-            background-color: var(--lred);
-            border-radius: 10px;
-            transition: all 0.3s linear;
-        }
-        /*Message*/
-        
-        .page-message {
-            padding: 6vh 5vw;
-        }
-        
-        .cont-main {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .cont-form {
-            width: 45%;
-        }
-        
-        .cont-det {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-        
-        .form {
-            color: var(--red);
-            background-color: var(--white);
-            padding: 12px;
-            border-radius: 6px;
-            border: 3px solid var(--red);
-            font-size: 20px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            width: 100%;
-            resize: vertical;
-            font-weight: bold;
-        }
-        
-        #Message_form .button .tex {
-            color: var(--red) !important;
-        }
-        
-        #Message_form .button:hover .tex {
-            color: var(--white) !important;
-        }
-        
-        input:focus {
-            outline: none;
-            color: var(--white);
-            background-color: var(--red);
-            font-weight: bold;
-        }
-        
-        input:focus::placeholder {
-            color: var(--white);
-            opacity: 1;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        textarea:focus {
-            outline: none;
-            color: var(--white);
-            background-color: var(--red);
-            font-weight: bold;
-        }
-        
-        textarea:focus::placeholder {
-            color: var(--white);
-            opacity: 1;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-         ::placeholder {
-            color: var(--lred);
-            opacity: 1;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        .content-main {
-            display: inline-block;
-            font-size: 30px;
-            font-weight: 300;
-            padding: 6px 0px;
-            text-align: center;
-        }
-        /*Each page title*/
-        
-        .div-title {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        
-        .title-top-icon {
-            height: 100px;
-            width: 100px;
-            font-size: 100px;
-        }
-        
-        .title-top-icon img {
-            height: inherit;
-            width: inherit;
-        }
-        
-        .title-bottom-icon {
-            height: 30px;
-            transform: translateY(calc(-50% - 4px));
-        }
-        
-        .title-bottom-icon img {
-            height: inherit;
-            width: inherit;
-        }
-        
-        .title-text-div {
-            border-top: 2px solid var(--red);
-            border-bottom: 2px solid var(--red);
-        }
-        
-        .font-title {
-            margin: 1px 0px;
-            border-top: 2px solid var(--red);
-            border-bottom: 2px solid var(--red);
-            font-weight: bold;
-            color: var(--white);
-            font-size: 6vmin;
-            padding: 4px 15px 15px 15px;
-        }
-        
-        footer div {
-            text-align: center;
-            padding: 15px;
-            background-color: var(--red);
-            color: var(--white);
-        }
-    </style>
+    <title>Demo Wedding Invitation</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -911,7 +28,9 @@
                         <p class="gro-tit">Groom</p>
                     </div>
                 </div>
-                <p class="hom-get-text tecen">are getting married</p>
+                <p class="hom-get-text tecen">
+                    <span class="disBMar">are getting married</span>
+                    <span class="disAMar">Have got married</span></p>
                 <div class="hom-div-title">
 
                     <div class="hom-title-text-div">
@@ -920,7 +39,7 @@
 
                     <div class="hom-title-bottom-icon"><img src="love-dual.png" alt=""></div>
                 </div>
-                <div class="button" onclick="alert('save the date')">
+                <div class="button disBMar" onclick="alert('save the date')">
                     <div class="layer"></div>
                     <div class="tex flex-col">
                         <h4>Save the Date</h4>
@@ -929,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="page-youtube">
+    <div class="page-youtube disMvi">
         <div class="div-title">
             <div class="title-top-icon"><i class="fa-brands fa-youtube cred"></i></div>
             <div class="title-text-div">
@@ -970,18 +89,26 @@
     </div>
     <div class="page-countdown">
         <div class="bg-fil-bla">
-            <p class="fam-nam">Family name's Wedding Invitation</p>
+            <p class="fam-nam">
+                <span class="disSMal disBMar">Bride Family's wedding Invitation</span>
+                <span class="disSFem disBMar">Groom Family's wedding Invitation</span>
+                <span class="disAMar">We are a Family now!</span></p>
             <div class="con-pat">
                 <div class="left cwhite tecen">
-                    <p class="text5">We invite you to the wedding of</p>
+                    <p class="text5 disBMar">We invite you to the wedding of</p>
                     <p class="BG-nam">Bride &nbsp;&nbsp;<img src="gan.png" alt="">&nbsp; Groom</p>
                     <br>
-                    <p class="text5">on</p>
+                    <p class="text5">
+                        <span class="disBMar">on</span>
+                        <span class="disAMar">got married on</span></p>
                     <p class="text6">Thursday, 26<sup>th</sup> May, 2022 at 12:32 p.m</p>
-                    <br><br><br>
+
+                    <p class="text5">
+                        <span class="disBMar"><br><br><br></span>
+                        <span class="disAMar">at<br></span></p>
                     <p class="text4"><i class="fa-solid fa-location-dot"></i> &nbsp;&nbsp; L.B Convention, Beside S.R.R Function Hall, Nirmal Road, Bhainsa</p>
                     <br>
-                    <div class="flex-row">
+                    <div class="flex-row disBMar">
                         <a href="wa.me/917680904589">
                             <div class="but-map">
                                 <div class="but-map-lay flex-row">
@@ -997,6 +124,9 @@
                     </div>
                 </div>
                 <div class="right">
+                    <p class="text5 cwhite tecen">
+                        <span class="disBMar">We are left with</span>
+                        <span class="disAMar">They are happy since </span></p>
                     <div id="div-con-tim">
                         <div class="div-com">
                             <div class="tim-val">
@@ -1043,7 +173,7 @@
             </div>
         </div>
     </div>
-    <div class="page-event">
+    <div class="page-event Event">
         <div class="div-title">
             <div class="title-top-icon"><img src="love-bird.png" alt=""></div>
             <div class="title-text-div">
@@ -1261,13 +391,23 @@
     <footer>
         <div class="flex-col">
             <h1>Powered&nbsp;&nbsp; by &nbsp;&nbsp; <a style="text-decoration: underline;" href="https://wethinc.in/">We&nbsp; Thinc&nbsp; Solutions</a></h1>
-            <h2 style="margin: 15px 0px 5px;">We Think for your growth</h2>
+            <h2 style="margin: 15px 0px 5px;">We &nbsp;Think &nbsp;for&nbsp; your&nbsp; growth</h2>
         </div>
     </footer>
 
-
-
     <script>
+        function changeRelation(n) {
+            let side = document.getElementsByClassName("sid-fam");
+            let main = document.getElementsByClassName("car-man-BG");
+            for (i = 0; i < side.length; i++) {
+                side[i].style.display = "none";
+                main[i].classList.remove("active");
+            }
+            main[n].classList.add("active");
+            side[n].style.display = "flex";
+        }
+        changeRelation(0);
+
         function submit_form() {
             var form = document.getElementById("Message_form");
             form.submit();
@@ -1284,18 +424,6 @@
                 return false;
             }
         }
-
-        function changeRelation(n) {
-            let side = document.getElementsByClassName("sid-fam");
-            let main = document.getElementsByClassName("car-man-BG");
-            for (i = 0; i < side.length; i++) {
-                side[i].style.display = "none";
-                main[i].classList.remove("active");
-            }
-            main[n].classList.add("active");
-            side[n].style.display = "flex";
-        }
-        changeRelation(0);
         //countdown
         var Mar = new Date('2021-05-21T21:30:00');
         var Din = new Date('2022-05-22T20:30:00');
@@ -1304,8 +432,6 @@
         var Amar = new Date(Mar.getTime() + (12 * 60 * 60 * 1000));
         var Bdin = new Date(Din.getTime() - (12 * 60 * 60 * 1000));
         var Adin = new Date(Din.getTime() + (12 * 60 * 60 * 1000));
-        console.log(Mar.getTime());
-        console.log(Bmar.getTime());
 
         var IDyr, IDdy, IDhr, IDmi, IDse;
         var NIDyr, NIDdy, NIDhr, NIDmi, NIDse;
@@ -1320,8 +446,64 @@
         NIDmi = document.getElementById('tim-min-cat');
         NIDse = document.getElementById('tim-sec-cat');
 
-        function updateTimer() {
+        //Set displays by url
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        A = url.searchParams.get("A");
+        B = url.searchParams.get("B");
+        if (url.searchParams.has('D') === true) {
+            D = url.searchParams.get("D");
             var now = new Date();
+            if (D == 1) {
+                var Mar = new Date(now.getTime() + (10 * 24 * 60 * 60 * 1000));
+                var Din = new Date(now.getTime() + (11 * 24 * 60 * 60 * 1000));
+
+            }
+            if (D == 2) {
+                var Mar = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+                var Din = new Date(now.getTime() + (30 * 60 * 60 * 1000));
+            }
+            if (D == 3) {
+                var Mar = new Date(now.getTime() - (8 * 60 * 60 * 1000));
+                var Din = new Date(now.getTime() + (20 * 60 * 60 * 1000));
+            }
+            if (D == 4) {
+                var Mar = new Date(now.getTime() - (2 * 24 * 60 * 60 * 1000));
+                var Din = new Date(now.getTime() + (24 * 60 * 60 * 1000));
+            }
+            var Bmar = new Date(Mar.getTime() - (12 * 60 * 60 * 1000));
+            var Amar = new Date(Mar.getTime() + (12 * 60 * 60 * 1000));
+            var Bdin = new Date(Din.getTime() - (12 * 60 * 60 * 1000));
+            var Adin = new Date(Din.getTime() + (12 * 60 * 60 * 1000));
+
+        }
+
+        var SeMal, SeFem;
+        SeMal = document.getElementsByClassName("disSMal")
+        SeFem = document.getElementsByClassName("disSFem")
+        if (A == 1) {
+            claDisNon(SeFem);
+            claDisOpp(SeMal);
+            changeRelation(0);
+            // code for male
+        } else {
+            claDisNon(SeMal);
+            claDisOpp(SeFem);
+            changeRelation(1);
+            // code for female
+        }
+        var Evn
+        Evn = document.getElementsByClassName("Event")
+        if (B == 1) {
+            claDisOpp(Evn);
+            // code for Event-1
+        } else {
+            claDisNon(Evn);
+            // code for delete Event-1
+        }
+
+        function updateTimer() {
+            now = new Date();
             var distance = Mar.getTime() - now.getTime();
             if (distance < 0) {
                 distance = -1 * distance;
@@ -1396,6 +578,57 @@
                 NIDse.innerHTML = "Seconds";
                 IDse.innerHTML = seconds;
             }
+            //Set displays by time
+            var Cinv, Cmvi, Cdvi, Cmem;
+            Cinv = document.getElementsByClassName("disInv")
+            Cmvi = document.getElementsByClassName("disMvi")
+            Cdvi = document.getElementsByClassName("disDvi")
+            Cmem = document.getElementsByClassName("disMem");
+            if (now.getTime() <= Bmar.getTime()) {
+                claDisNon(Cmvi);
+                claDisNon(Cdvi);
+                claDisNon(Cmem);
+                claDisOpp(Cinv);
+            } else if (now.getTime() <= Bdin.getTime()) {
+                claDisNon(Cinv);
+                claDisNon(Cdvi);
+                claDisNon(Cmem);
+                claDisOpp(Cmvi);
+            } else if (now.getTime() <= Adin.getTime()) {
+                claDisNon(Cinv);
+                claDisNon(Cmvi);
+                claDisNon(Cmem);
+                claDisOpp(Cdvi);
+            } else if (now.getTime() > Adin.getTime()) {
+                claDisNon(Cinv);
+                claDisNon(Cmvi);
+                claDisNon(Cdvi);
+                claDisOpp(Cmem);
+            }
+            var Cbmar, Camar;
+            Cbmar = document.getElementsByClassName("disBMar")
+            Camar = document.getElementsByClassName("disAMar")
+            if (Mar.getTime() >= now.getTime()) {
+                claDisNon(Camar);
+                claDisOpp(Cbmar);
+            } else {
+                claDisNon(Cbmar);
+                claDisOpp(Camar);
+            }
+        }
+
+        function claDisNon(x) {
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.add("disnon");
+            }
+
+        }
+
+        function claDisOpp(x) {
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("disnon");
+            }
+
         }
         updateTimer();
         setInterval('updateTimer()', 1000);
