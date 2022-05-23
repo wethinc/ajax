@@ -202,7 +202,7 @@
 @media screen and (max-width: 400px) {
     .button {
         height: 26vmin;
-        width: 90vmin;
+        width: 80vmin;
         border-radius: 13vmin;
     }
     .button .tex {
@@ -210,7 +210,7 @@
     }
     .layer {
         bottom: 0px;
-        left: 45vmin;
+        left: 40vmin;
         width: 16vmin;
         height: 16vmin;
         transform: translate(-50%, 35%);
@@ -224,22 +224,22 @@
 
 @media screen and (max-width: 350px) {
     .but-map {
-        height: 40px;
-        width: 186px;
-        border-radius: 20px;
-        padding: 3px;
+        height: 26vmin;
+        width: 80vmin;
+        border-radius: 13vmin;
+        padding: 1vmin;
     }
     .but-map-lay {
-        height: 34px;
-        width: 180px;
-        border-radius: 17px;
+        height: 24vmin;
+        width: 78vmin;
+        border-radius: 12px;
     }
     .but-map-lay .tex {
-        font-size: 18px;
+        font-size: 9vmin;
     }
     .but-map-lay img {
-        height: 30px;
-        width: 30px;
+        height: 15vmin;
+        width: 15vmin;
     }
 }
 
