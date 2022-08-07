@@ -2,29 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://wethinc.in/</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
+  <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url><url>
   <loc>https://wethinc.in/work/</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
+  <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url><url>
   <loc>https://wethinc.in/team/</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
+  <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   <priority>0.50</priority>
 </url><url>
-  <loc>https://wethinc.in/blog/</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
-  <priority>0.60</priority>
-</url><url>
   <loc>https://wethinc.in/contact/</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
+  <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 
 <url>
   <loc>https://wethinc.in/blogs/1.html</loc>
-  <lastmod>2021-05-10T08:31:23+00:00</lastmod>
+  <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   <priority>0.50</priority>
 </url>
 </urlset>
