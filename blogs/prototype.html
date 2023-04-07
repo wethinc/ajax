@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://wethinc.in/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://wethinc.in/favicon-16x16.png">
     <link rel="icon" href="final logo.PNG">
-    <link rel="stylesheet" href="mixed stylesheet.css">
+    <link rel="stylesheet" href="blogSheet.css">
     <script src="https://kit.fontawesome.com/b8be333c62.js" crossorigin="anonymous" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -112,13 +112,18 @@
                             <h3 class="content-p1 cpink">1. Lorem ipsum dolor sit amet.</h3>
                         </div>
                         <br>
-                        <p class="content-p3 cwhite2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eveniet architecto aliquid itaque. Excepturi delectus porro neque ea aliquam quibusdam libero doloremque dolorum esse nam quidem quia pariatur facilis incidunt eos non,
-                            amet assumenda magnam accusamus aspernatur, commodi debitis! Soluta, debitis! Porro exercitationem delectus nihil, ipsa tempora nisi voluptas, ipsum natus nostrum sequi aspernatur in, nesciunt vel voluptates similique placeat
-                            totam maxime fugit voluptate corrupti soluta laborum ipsam harum. Eius dolorem consequatur, deleniti ad sed adipisci vitae esse quo ipsa fugit natus a voluptatibus, asperiores laboriosam? Repudiandae veritatis architecto delectus
-                            molestiae eius. Minus quos harum saepe minima expedita quasi ex. Necessitatibus at amet ea praesentium repudiandae, maxime consectetur esse vero similique quisquam, error accusamus nesciunt, velit eum hic dignissimos possimus
-                            asperiores dolor unde? Debitis perferendis quam esse, accusamus repellat praesentium aliquid cupiditate sapiente perspiciatis nemo excepturi totam pariatur neque illo consectetur aliquam quo facere reiciendis nostrum provident
-                            minus. Aspernatur, nulla?
+<p class="content-p3 cwhite2">
+    <span class="inlinecode content-p3">Lorem ipsum dolor sit</span> amet consectetur adipisicing elit. Iste eveniet
+    architecto aliquid itaque. Excepturi delectus porro neque ea aliquam quibusdam libero doloremque dolorum esse
+    nam quidem quia pariatur facilis incidunt eos non, amet assumenda magnam accusamus aspernatur, commodi debitis!
+    Soluta, debitis! Porro exercitationem delectus nihil, ipsa tempora nisi voluptas, ipsum natus nostrum sequi
+    aspernatur
+    in, nesciunt vel voluptates similique placeat totam maxime fugit voluptate corrupti soluta laborum ipsam harum. Eius
+    dolorem consequatur, deleniti ad sed adipisci vitae esse quo ipsa fugit natus a voluptatibus, asperiores laboriosam?
+    Repudiandae veritatis architecto delectus molestiae eius.
+
                         </p>
+
                         <br><br>
                         <div class="flex-row">
                             <img src="001.jpg">
@@ -129,7 +134,18 @@
                             <hr class="line-pink">
                         </div>
                         <br>
-                        <br>
+                        <p class="code">&#60;code&#62;</p>
+                        <div class="maincode content-p3" data-lang="javascript">
+                            <code id="maincode">
+                                                        <div>
+                                                            <hr class="line-pink">
+                                                            <p class="content-p3 cwhite2">If you want to hire a web designer right away without reading ,
+                                                                <span class="cblue"><a href="#"> click here</a></span> and send me a message!</p>
+                                                            <hr class="line-pink">
+                                                        </div>                                  
+                                                    </code>
+                        </div>
+                        <p class="code">&#60;/code&#62;</p><br><br>
                         <div id="part-2" class="matter-head">
                             <h3 class="content-p1 cpink">2. Lorem ipsum dolor sit amet.</h3>
                         </div>
@@ -179,8 +195,8 @@
                                         <div class="botdot"></div>
                                         <input type="submit" value="Submit">
                                     </div>
-                                    
-                                    
+
+
                                     <input type="hidden" name="_next" value="https://wethinc.in">
                                     <input type="hidden" name="_subject" value="New submission on Wethinc!">
                                     <input type="hidden" name="_cc" value="rpranayreddy40@gmail.com,bkkvarun24@gmail.com,nirvanreddy18@gmail.com">
@@ -200,5 +216,12 @@
 
 
 </body>
+
+<script>
+    var codetext = document.getElementById("maincode");
+    msg = codetext.innerHTML;
+    codetext.innerHTML = "";
+    codetext.innerText = msg;
+</script>
 
 </html>
