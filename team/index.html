@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team</title>
-    <meta name="description" content="We are a team of three with focused and positive attitude towards facing challenges.">
+    <meta name="description"
+        content="We are a team of three with focused and positive attitude towards facing challenges.">
     <meta name="keywords" content="we, thinc, solutions, pranay, kumar, varun, nirvan, reddy">
     <meta name="author" content="We thinc solutions">
     <meta name="author" content="Ravula Pranay Kumar Reddy">
@@ -30,16 +31,16 @@
             $("#myNav").removeClass("nav-open");
             $.ajax({
                 url: page,
-                beforeSend: function() {
+                beforeSend: function () {
                     $("#loading").addClass("loadin");
                 },
-                success: function(data) {
-                    setTimeout(function() {
+                success: function (data) {
+                    setTimeout(function () {
                         $('#screen').html(""); // to empty previous page contents.
                         $('#screen').html(data);
                         $("#loading").addClass("loadout");
                         $("#loading").removeClass("loadin");
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $("#loading").removeClass("loadout");
                         }, 650);
                     }, 2000);
@@ -47,17 +48,17 @@
             });
         }
         /*jelly effect*/
-        $(document).ready(function() {
-            $(".jelly").mouseenter(function() {
+        $(document).ready(function () {
+            $(".jelly").mouseenter(function () {
                 $(this).toggleClass("animjelly");
-                setTimeout(function() {
+                setTimeout(function () {
                     $(this).toggleClass("animjelly");
                 }, 1050);
             });
         });
         /*animation on scroll for slide in*/
-        $(window).scroll(function() {
-            $(".slideanim").each(function() {
+        $(window).scroll(function () {
+            $(".slideanim").each(function () {
                 var pos = $(this).offset().top;
 
                 var winTop = $(window).scrollTop();
@@ -106,12 +107,16 @@
                 </div>
             </div>
             <div class="nav-link flex-col ">
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajhome.html')"><span id="lhome">Home</span></div>
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajwork.html')"><span id="lwork">Work</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajhome.html')"><span
+                        id="lhome">Home</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajwork.html')"><span
+                        id="lwork">Work</span></div>
                 <!--<div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajblog.html')"><span id="lblog">Blog</span></div>
                 -->
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajteam.html')"><span id="lteam">Team</span></div>
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajcontact.html')"><span id="lcontact">Contact</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajteam.html')"><span
+                        id="lteam">Team</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajcontact.html')"><span
+                        id="lcontact">Contact</span></div>
             </div>
         </div>
         <div class="sect">
@@ -145,8 +150,10 @@
                 <p class="code">&#60;h1&#62;</p>
                 <div class="matter-head">
 
-                    <img src="https://wethinc.in/images/we.PNG" alt="Logo of We thinc Solutions | front end development" class="h1we-text jelly hwhite" alt="We">
-                    <h1 class="content-h1 cwhite1">&#160;<span class="jelly hblue">a</span><span class="jelly hblue">r</span><span class="jelly hblue">e</span></h1>
+                    <img src="https://wethinc.in/images/we.PNG" alt="Logo of We thinc Solutions | front end development"
+                        class="h1we-text jelly hwhite" alt="We">
+                    <h1 class="content-h1 cwhite1">&#160;<span class="jelly hblue">a</span><span
+                            class="jelly hblue">r</span><span class="jelly hblue">e</span></h1>
 
                 </div>
                 <p class="code">&#60;/h1&#62;</p>
@@ -158,14 +165,15 @@
         <div class="team-section flex-col">
             <div class="team-row">
                 <div class="team-col">
-                    <div class="team-box"> <img src="https://wethinc.in/images/varun.jpg" alt="Image of Varun Reddy Bokka"></div>
+                    <div class="team-box"> <img src="https://wethinc.in/images/varun.jpg"
+                            alt="Image of Varun Reddy Bokka"></div>
                     <div class="flex-col team-box team-text cwhite1">
                         <div>
-                            <h1 class="content-p1">Varun Reddy</h1>
-                            <br>
-                            <h1 class="content-p2 cpink">Thor</h1>
-                            <br>
-                            <h1 class="content-p3">He codes for websites with utmost interest. He is a free-spirited coder. His focus on solving challenges is simply great. The aspect that impresses me a lot about him is his capacity of grasping things faster.
+                            <h1 class="content-p1 cpink">Varun Reddy</h1>
+                            <h1 class="content-p3">He codes with a deep interest and free-spirited approach. His focus
+                                on solving complex challenges is simply remarkable, and he always delivers exceptional
+                                solutions with ease. With his exceptional coding skills and unwavering enthusiasm, he is
+                                a true asset to any project.
                             </h1>
                         </div>
 
@@ -185,12 +193,12 @@
                 <div class="team-col">
                     <div class="flex-col team-box  team-text order2 cwhite1">
                         <div>
-                            <h1 class="content-p1">Pranay Kumar Reddy</h1>
+                            <h1 class="content-p1 cpink">Pranay Kumar Reddy</h1>
                             <br>
-                            <h1 class="content-p2 cpink">Iron Man</h1>
-                            <br>
-                            <h1 class="content-p3">He does everything from designing to hosting by considering the wide range of thoughts. He enjoys designing and coding a website. He works with great confidence and discipline. His ideas and logics are the things we admire
-                                a lot.</h1>
+                            <h1 class="content-p3"> He designs and codes websites with passion and creativity,
+                                delivering exceptional results. His disciplined and confident approach to projects with
+                                his creative vision with a logical mindset, highly admired by team members
+                            </h1>
                         </div>
 
                         <div class="team-social">
@@ -203,18 +211,21 @@
 
                         </div>
                     </div>
-                    <div class="team-box order1"><img src="https://wethinc.in/images/pranay.jpeg" alt="Image of Pranay Kumar Reddy Ravula"></div>
+                    <div class="team-box order1"><img src="https://wethinc.in/images/pranay.jpeg"
+                            alt="Image of Pranay Kumar Reddy Ravula"></div>
                 </div>
 
                 <div class="team-col">
-                    <div class="team-box"><img src="https://wethinc.in/images/nirvan.jpg" alt="Image of Nirvan Reddy Bokka"></div>
+                    <div class="team-box"><img src="https://wethinc.in/images/nirvan.jpg"
+                            alt="Image of Nirvan Reddy Bokka"></div>
                     <div class="flex-col team-box  team-text cwhite1">
                         <div>
-                            <h1 class="content-p1">Nirvan Reddy</h1>
+                            <h1 class="content-p1 cpink">Nirvan Reddy</h1>
                             <br>
-                            <h1 class="content-p2 cpink">Captain America</h1>
-                            <br>
-                            <h1 class="content-p3">He primarily codes as well as tests the website. His advice is always worthy of changing. He faces any challenge with an easy mindset. He makes the work a humorous experience. He is shrewd and self-motivated.
+                            <h1 class="content-p3">A highly skilled web developer. He excels in both coding and testing
+                                websites, and his insights are always valuable. He stands out for his capacity to tackle
+                                challenges with a calm and carefree attitude, transforming intricate tasks into a
+                                pleasurable and amusing experience.
                             </h1>
                         </div>
 
@@ -231,8 +242,6 @@
                     </div>
                 </div>
             </div>
-
-            <p class="code">*Descriptions are given by colleagues</p>
         </div>
 
         <br><br>
