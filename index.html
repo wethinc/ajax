@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Thinc Solutions</title>
-    <meta name="description" content="We thinc solutions : We are here to architect & navigate your preferred Logos & Templates all-over the globe with benchmark standard Webpages. As wethinc.in to make you fortunate with our skills to reach your destination of digital space with most admirable Web Presence.">
+    <meta name="description"
+        content="We thinc solutions : We are here to architect & navigate your preferred Logos & Templates all-over the globe with benchmark standard Webpages. As wethinc.in to make you fortunate with our skills to reach your destination of digital space with most admirable Web Presence.">
     <meta name="keywords" content="we thinc solutions">
     <meta name="author" content="We thinc solutions">
     <meta name="author" content="Ravula Pranay Kumar Reddy">
@@ -30,16 +31,16 @@
             $("#myNav").removeClass("nav-open");
             $.ajax({
                 url: page,
-                beforeSend: function() {
+                beforeSend: function () {
                     $("#loading").addClass("loadin");
                 },
-                success: function(data) {
-                    setTimeout(function() {
+                success: function (data) {
+                    setTimeout(function () {
                         $('#screen').html(""); // to empty previous page contents.
                         $('#screen').html(data);
                         $("#loading").addClass("loadout");
                         $("#loading").removeClass("loadin");
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $("#loading").removeClass("loadout");
                         }, 650);
                     }, 2000);
@@ -47,17 +48,17 @@
             });
         }
         /*jelly effect*/
-        $(document).ready(function() {
-            $(".jelly").mouseenter(function() {
+        $(document).ready(function () {
+            $(".jelly").mouseenter(function () {
                 $(this).toggleClass("animjelly");
-                setTimeout(function() {
+                setTimeout(function () {
                     $(this).toggleClass("animjelly");
                 }, 1050);
             });
         });
         /*animation on scroll for slide in*/
-        $(window).scroll(function() {
-            $(".slideanim").each(function() {
+        $(window).scroll(function () {
+            $(".slideanim").each(function () {
                 var pos = $(this).offset().top;
 
                 var winTop = $(window).scrollTop();
@@ -106,12 +107,16 @@
                 </div>
             </div>
             <div class="nav-link flex-col ">
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajhome.html')"><span id="lhome">Home</span></div>
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajwork.html')"><span id="lwork">Work</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajhome.html')"><span
+                        id="lhome">Home</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajwork.html')"><span
+                        id="lwork">Work</span></div>
                 <!--<div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajblog.html')"><span id="lblog">Blog</span></div>
                 -->
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajteam.html')"><span id="lteam">Team</span></div>
-                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajcontact.html')"><span id="lcontact">Contact</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajteam.html')"><span
+                        id="lteam">Team</span></div>
+                <div class="linbutt" value="load" onclick="loadpage('https://wethinc.in/ajcontact.html')"><span
+                        id="lcontact">Contact</span></div>
             </div>
         </div>
         <div class="sect">
@@ -143,14 +148,26 @@
                 <p class="code">&#60;body&#62;</p>
                 <p class="code">&#60;h1&#62;</p>
                 <div class="matter-head">
-                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">H</span><span class="jelly hblue">i</span><span class="jelly hblue">,</span>&#160;</h1>
+                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">H</span><span
+                            class="jelly hblue">i</span><span class="jelly hblue">,</span>&#160;</h1>
                     <br>
-                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">W</span><span class="jelly hblue">e</span><span class="jelly hblue">l</span><span class="jelly hblue">c</span><span class="jelly hblue">o</span><span class="jelly hblue">m</span><span class="jelly hblue">e</span>&#160;</h1>
-                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">t</span><span class="jelly hblue">o</span><span class="jelly hblue">,</span>&#160;</h1>
+                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">W</span><span
+                            class="jelly hblue">e</span><span class="jelly hblue">l</span><span
+                            class="jelly hblue">c</span><span class="jelly hblue">o</span><span
+                            class="jelly hblue">m</span><span class="jelly hblue">e</span>&#160;</h1>
+                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">t</span><span
+                            class="jelly hblue">o</span><span class="jelly hblue">,</span>&#160;</h1>
                     <br>
-                    <h1 class="content-h1 cwhite1 jelly hblue"><img class="h1we-text" src="https://wethinc.in/images/we.PNG" alt="Logo of We thinc Solutions | front end development">&#160;</h1>
-                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">T</span><span class="jelly hblue">h</span><span class="jelly hblue">i</span><span class="jelly hblue">n</span><span class="jelly hblue">c</span>&#160;</h1>
-                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">S</span><span class="jelly hblue">o</span><span class="jelly hblue">l</span><span class="jelly hblue">u</span><span class="jelly hblue">t</span><span class="jelly hblue">ion</span><span class="jelly hblue">s</span>
+                    <h1 class="content-h1 cwhite1 jelly hblue"><img class="h1we-text"
+                            src="https://wethinc.in/images/we.PNG"
+                            alt="Logo of We thinc Solutions | front end development">&#160;</h1>
+                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">T</span><span
+                            class="jelly hblue">h</span><span class="jelly hblue">i</span><span
+                            class="jelly hblue">n</span><span class="jelly hblue">c</span>&#160;</h1>
+                    <h1 class="content-h1 cwhite1"><span class="jelly hblue">S</span><span
+                            class="jelly hblue">o</span><span class="jelly hblue">l</span><span
+                            class="jelly hblue">u</span><span class="jelly hblue">t</span><span
+                            class="jelly hblue">ion</span><span class="jelly hblue">s</span>
                     </h1>
 
                     <p class="code inline">&#60;/h1&#62;</p>
@@ -185,16 +202,27 @@
                 <div>
                     <p class="code">&#60;h2&#62;</p>
                     <div class="matter-head">
-                        <h1 class="content-h1 cblue jelly hwhite"><img class="h1we-text" src="https://wethinc.in/images/we.PNG" alt="Logo of We thinc Solutions | front end development">&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">H</span><span class="jelly hwhite">a</span><span class="jelly hwhite">v</span><span class="jelly hwhite">e</span>&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">D</span><span class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span class="jelly hwhite">e</span></h1>
+                        <h1 class="content-h1 cblue jelly hwhite"><img class="h1we-text"
+                                src="https://wethinc.in/images/we.PNG"
+                                alt="Logo of We thinc Solutions | front end development">&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">H</span><span
+                                class="jelly hwhite">a</span><span class="jelly hwhite">v</span><span
+                                class="jelly hwhite">e</span>&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">D</span><span
+                                class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span
+                                class="jelly hwhite">e</span></h1>
                         <p class="code inline">&#60;/h2&#62;</p>
                     </div>
                     <p class="code">&#60;p&#62;</p>
                     <div class="matter-head">
                         <p class="content-p2 cwhite4">Hey all,
-                            <br>We are here to architect &amp; navigate your preferred <span class="cblue">Logos </span> &amp; <span class="cblue">Templates </span> all-over the globe with benchmark standard <span class="cblue">Webpages</span>. As
-                            <span class="cpink">wethinc.in </span>to make you fortunate with our skills to reach your destination of digital space with most admirable Web Presence.<br><br><span class="cpink">WeThinc </span> for you.</p>
+                            <br>We are here to architect &amp; navigate your preferred <span class="cblue">Logos </span>
+                            &amp; <span class="cblue">Templates </span> all-over the globe with benchmark standard <span
+                                class="cblue">Webpages</span>. As
+                            <span class="cpink">wethinc.in </span>to make you fortunate with our skills to reach your
+                            destination of digital space with most admirable Web Presence.<br><br><span
+                                class="cpink">WeThinc </span> for you.
+                        </p>
                     </div>
                     <p class="code">&#60;/p&#62;</p>
                     <br>
@@ -206,7 +234,8 @@
             <div class="slideanim works">
                 <div id="web-YTD" class="frame block">
                     <img src="https://wethinc.in/images/7.png" alt="image of Youtube Playlist Ranger">
-                    <div class="details flex-col" onclick="location.href='https://chrome.google.com/webstore/detail/youtube-playlist-ranger/alpnapppdjbdbbaagjpchaaipphcnejo'">
+                    <div class="details flex-col"
+                        onclick="location.href='https://chrome.google.com/webstore/detail/youtube-playlist-ranger/alpnapppdjbdbbaagjpchaaipphcnejo'">
                         <div>
                             <h1 class="cwhite">Youtube Playlist Ranger</h1>
                         </div>
@@ -257,7 +286,8 @@
         <main>
             <div class="matter-main">
                 <br>
-                <p class="content-p3 teleft" style="justify-content: right;  font-family: cursive; font-size: 2.5vh;">* all the above projects are displayable versions</p>
+                <p class="content-p3 cblack1" style="display:flex;  justify-content: right;  font-family: cursive; font-size: 2.5vh; ">
+                    &#60;!-- all the above projects are displayable versions&#62; --&#62;</p>
                 <br>
                 <p class="code">&#60;button&#62;</p>
                 <div class="matter-head">
@@ -273,17 +303,54 @@
                 <div>
                     <p class="code">&#60;h2&#62;</p>
                     <div class="matter-head">
-                        <h1 class="content-h1 cblue jelly hwhite"><img class="h1we-text" src="https://wethinc.in/images/we.PNG" alt="Logo of We thinc Solutions | front end development">&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">h</span><span class="jelly hwhite">a</span><span class="jelly hwhite">v</span><span class="jelly hwhite">e</span>&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">b</span><span class="jelly hwhite">e</span><span class="jelly hwhite">e</span><span class="jelly hwhite">n</span>&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">g</span><span class="jelly hwhite">o</span><span class="jelly hwhite">i</span><span class="jelly hwhite">n</span><span class="jelly hwhite">g</span>&#160;</h1>
-                        <h1 class="content-h1 cblue"><span class="jelly hwhite">t</span><span class="jelly hwhite">h</span><span class="jelly hwhite">r</span><span class="jelly hwhite">o</span><span class="jelly hwhite">u</span><span class="jelly hwhite">g</span><span class="jelly hwhite">h</span></h1>
+                        <h1 class="content-h1 cblue jelly hwhite"><img class="h1we-text"
+                                src="https://wethinc.in/images/we.PNG"
+                                alt="Logo of We thinc Solutions | front end development">&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">h</span><span
+                                class="jelly hwhite">a</span><span class="jelly hwhite">v</span><span
+                                class="jelly hwhite">e</span>&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">b</span><span
+                                class="jelly hwhite">e</span><span class="jelly hwhite">e</span><span
+                                class="jelly hwhite">n</span>&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">g</span><span
+                                class="jelly hwhite">o</span><span class="jelly hwhite">i</span><span
+                                class="jelly hwhite">n</span><span class="jelly hwhite">g</span>&#160;</h1>
+                        <h1 class="content-h1 cblue"><span class="jelly hwhite">t</span><span
+                                class="jelly hwhite">h</span><span class="jelly hwhite">r</span><span
+                                class="jelly hwhite">o</span><span class="jelly hwhite">u</span><span
+                                class="jelly hwhite">g</span><span class="jelly hwhite">h</span></h1>
                         <p class="code inline">&#60;/h2&#62;</p>
                     </div>
                     <p class="code">&#60;p&#62;</p>
                     <div class="matter-head jourwidth">
-                        <p class="content-p2 cwhite4">Our web development journey has begun with a search of freelancing. But, now it as turn out as passion for code. outcome as always been giving high. We are always spirited for designing challenging websites. But, even a basic website
-                            has been exciting us with new ideas.<br><br> We are looking forward for opportunities to work with different companies and individuals. We hope to meet & collaborate with amazing and ambitious people around the globe.<br><br>
+                        <p class="content-p2 cwhite4">When we first began our journey in web development, we started by searching for freelancing opportunities. At that point, we were just trying to make some
+                            extra money and gain some experience. However, as we delved deeper into the field, we found
+                            that we had a true passion for coding. The more we learned, the more fascinated we became,
+                            and the more we realized that this was something we wanted to do for the long term.
+                            <br><br>
+                            We have found that designing challenging websites is especially exciting. There is something
+                            incredibly satisfying about taking on a difficult project and seeing it through to
+                            completion. We enjoy the feeling of accomplishment that comes with overcoming complex
+                            problems and creating something that truly stands out.
+                            <br><br>
+                            At the same time, we have also found that even basic websites can be inspiring. We are
+                            always looking for new ideas and ways to improve our work, and even a simple project can
+                            present interesting challenges and opportunities for creativity.
+                            <br><br>
+                            Now, we are eager to take our skills to the next level by working with different companies
+                            and individuals. We believe that collaboration is essential for growth and improvement, and
+                            we are excited about the prospect of meeting and learning from amazing and ambitious people
+                            from around the world.
+                            <br><br>
+                            Working with different companies and individuals will not only expose us to new ideas and
+                            perspectives, but it will also help us expand our network and gain valuable experience. By
+                            collaborating with others, we hope to continue growing and improving as web developers,
+                            while also making meaningful connections and contributing to the success of others.
+                            <br><br>
+                            Overall, our passion for web development has taken us on an incredible journey so far, and
+                            we are excited to see where it will take us next. We believe that there is always room to
+                            learn and grow, and we are eager to take on new challenges and opportunities as we continue
+                            to pursue our passion for coding. 
                             <!--You'll get more about our experience and works at <span class="cblue"><a value="load" onclick="loadpage('https://wethinc.in/ajwork.html')">work</a></span> and <span class="cblue"><a value="load" onclick="loadpage('https://wethinc.in/ajblog.html')">blog</a></span>.</p>-->
                     </div>
                     <p class="code">&#60;/p&#62;</p>
@@ -327,7 +394,10 @@
                     <div>
                         <p class="code">&#60;h2&#62;</p>
                         <div class="matter-head">
-                            <h1 class="content-h1 cblue"><span class="jelly hwhite">C</span><span class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span class="jelly hwhite">t</span><span class="jelly hwhite">a</span><span class="jelly hwhite">c</span><span class="jelly hwhite">t</span></h1>
+                            <h1 class="content-h1 cblue"><span class="jelly hwhite">C</span><span
+                                    class="jelly hwhite">o</span><span class="jelly hwhite">n</span><span
+                                    class="jelly hwhite">t</span><span class="jelly hwhite">a</span><span
+                                    class="jelly hwhite">c</span><span class="jelly hwhite">t</span></h1>
                             <p class="code inline">&#60;/h2&#62;</p>
                         </div>
                         <div class="flex-row phone-col">
@@ -339,11 +409,16 @@
                             </div>
                             <div class="contwidth slideanim">
                                 <p class="code">&#60;form&#62;</p>
-                                <form name="contactform" autocomplete="off" action="https://formsubmit.co/wethinc3@gmail.com" onsubmit="return validateform()" method="POST">
+                                <form name="contactform" autocomplete="off"
+                                    action="https://formsubmit.co/wethinc3@gmail.com" onsubmit="return validateform()"
+                                    method="POST">
                                     <input class="form" type="text" id="fname" name="name" placeholder="Name" required>
-                                    <input class="form" type="mail" id="fmail" name="mail" placeholder="E-mail" required>
-                                    <input class="form" type="text" id="fsubject" name="subject" placeholder="Subject" required>
-                                    <textarea class="form" id="fmessage" name="message" placeholder="Message" style="height:150px"></textarea>
+                                    <input class="form" type="mail" id="fmail" name="mail" placeholder="E-mail"
+                                        required>
+                                    <input class="form" type="text" id="fsubject" name="subject" placeholder="Subject"
+                                        required>
+                                    <textarea class="form" id="fmessage" name="message" placeholder="Message"
+                                        style="height:150px"></textarea>
 
                                     <div class="button">
                                         <div class="layer"></div>
@@ -353,7 +428,8 @@
 
                                     <input type="hidden" name="_next" value="https://wethinc.in">
                                     <input type="hidden" name="_subject" value="New submission on Wethinc!">
-                                    <input type="hidden" name="_cc" value="rpranayreddy40@gmail.com,bkkvarun24@gmail.com,nirvanreddy18@gmail.com">
+                                    <input type="hidden" name="_cc"
+                                        value="rpranayreddy40@gmail.com,bkkvarun24@gmail.com,nirvanreddy18@gmail.com">
                                     <input type="hidden" name="_template" value="table">
                                 </form>
                                 <p class="code">&#60;/form&#62;</p>
